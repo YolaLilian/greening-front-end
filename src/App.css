@@ -1,6 +1,4 @@
-.App {
-  text-align: center;
-}
+
 
 .App-logo {
   height: 40vmin;
@@ -30,4 +28,5 @@ button {
   border-style: none;
   font-family: "Open Sans";
   font-size: 20px;
+  align-self: center; 
 }

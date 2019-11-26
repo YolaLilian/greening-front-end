@@ -48,17 +48,27 @@ class HeroImage extends Component {
     // }
 
   render() {
-    const style = {
+    const header = {
       color: "white",
-      position: "relative",
-      marginTop: "-50%",
-      fontFamily: "Bungee"
+      fontFamily: "Bungee",
+      alignSelf: "center"
     };
+    const bg = {
+      height:"100vh",
+      backgroundImage:`url(${logo})`,
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "center",
+      backgroundColor: "blue"
+    }
     return (
       <div className="App">
-        <img src={logo} height="100%" width="100%"/>
-          <h1 style={style}>{this.state.title}</h1>
-        <button className="button" onClick={ () => this.loadData() }>Deel jouw idee</button>
+          <div style={bg}>
+             <h1 style={header}>{this.state.title}</h1>
+            <button className="button" onClick={ () => this.loadData() }>Deel jouw idee</button>
+          </div>
       </div>
     );
   }
