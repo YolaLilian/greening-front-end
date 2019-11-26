@@ -6,16 +6,19 @@ import Logo from '../../images/Logo1.png';
 
 
 const MyDesktopNavbar = styled.nav`
+    z-index: 10;
     display: flex;
     flex-flow: row nowrap; 
     align-items: center;
-    
+
     background : #EEEEEE;
     height: 10vh;
+    position: fixed;
+    width: 100%;
 
     .logo img {
         height: 6.5vh;
-        margin-left: 70px;
+        margin-left: 6.5vw;
     }
 
     .nav-links {
@@ -23,7 +26,7 @@ const MyDesktopNavbar = styled.nav`
         flex-flow: row nowrap; 
         justify-content: space-evenly;  
         align-items: center;
-        margin-left: 850px;
+        margin-left: 40vw;
         width: 43vw;
 
         list-style: none;
