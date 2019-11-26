@@ -8,11 +8,9 @@ import Logo from '../../images/Logo1.png';
 const MyDesktopNavbar = styled.nav`
     display: flex;
     flex-flow: row nowrap; 
-    
     align-items: center;
-
+    
     background : #EEEEEE;
-    width: 100vw;
     height: 10vh;
 
     .logo img {
