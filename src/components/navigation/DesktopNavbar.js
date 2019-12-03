@@ -3,8 +3,6 @@ import styled from 'styled-components';
 import Navlinks from './Navlinks';
 import Logo from '../../images/Logo1.png';
 
-
-
 const MyDesktopNavbar = styled.nav`
     z-index: 10;
     display: flex;
@@ -28,7 +26,6 @@ const MyDesktopNavbar = styled.nav`
         align-items: center;
         margin-left: 40vw;
         width: 43vw;
-
         list-style: none;
     }
 
