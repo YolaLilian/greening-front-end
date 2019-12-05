@@ -60,8 +60,7 @@ class HeroImage extends Component {
       backgroundPosition: "center",
       display: "flex",
       flexDirection: "column",
-      justifyContent: "center",
-      backgroundColor: "blue"
+      justifyContent: "center"
     }
     return (
       <div className="App">
