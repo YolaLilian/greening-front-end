@@ -37,6 +37,7 @@ class Cardlink extends Component {
         padding: "30px",
         margin: "40px",
         marginTop: "-300px",
+        // cursor: "pointer"
     }
 
     const h3_style = {
