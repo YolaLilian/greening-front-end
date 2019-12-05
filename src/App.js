@@ -4,6 +4,7 @@ import { BrowserRouter } from 'react-router-dom';
 import './App.css';
 import HeroImage from './components/HeroImage';
 import Cardlink from './components/cardlink';
+import BrainstormCard from './components/BrainstormCard';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Navbar />
       <HeroImage />
       <Cardlink />
+      <BrainstormCard />
     </BrowserRouter>
   );
 }
