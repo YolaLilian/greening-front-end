@@ -3,74 +3,98 @@ import image from '../images/brainstorm.jpg'; // Use this image
 import gradient from '../images/gradient_2.jpg'; // Use this image
 import '../App.css';
 
+const header = {
+  width: "60%",
+  // height: "200px",
+  flexDirection: "column",
+  color: "white",
+  fontFamily: "Bungee",
+  display: "flex",
+  justifyContent: "center",
+  textAlign: "center",
+  // border: "2px solid yellow",
+  lineHeight: "50px"
+};
+
+const flatText = {
+  fontFamily: "Open Sans",
+  lineHeight: "30px"
+}
+
+const container = {
+  height: "580px",
+  width: "1233px",
+  justifyContent: "center",
+  alignSelf: "center",
+  flexDirection: "row",
+  display: "flex"
+}
+
+const gradientImage = {
+  height: "580px",
+  width: "50%",
+  float: "right",
+  display: "flex",
+  justifyContent: "center",
+  backgroundImage:`url(${gradient})`,
+  backgroundSize: "cover",
+  backgroundPosition: "center"
+}
+
+const brainstormImage = {
+  height: "580px",
+  width: "50%",
+  backgroundImage:`url(${image})`,
+  backgroundSize: "cover",
+  backgroundPosition: "center",
+}
+
+const bg = {
+  height:"100vh",
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "center",
+  // backgroundColor: "blue"
+}
+
 class BrainstormCard extends Component {
   constructor() {
     super()
     this.state = {
-      title: "Creeer een brainstormsessie",
-      
+      items: [],
+      isLoaded: false,
     }
-    console.log("Hallo ik ben er")
   }
+  
   loadData() {
     console.log("Load data")
     this.setState( {title: "Welkom bij Greening"})
   }
 
+  componentDidMount() {
+    fetch('http://greening.louis.lol/api')
+      .then(response => response.json())
+      .then(json => {
+        this.setState({
+          isLoaded: true,
+          items: json,
+        })
+      })
+      .catch(error => {
+        console.log("aaargh")
+        console.log(error)
+      })
+  }
+
   render() {
-    const header = {
-      width: "60%",
-      // height: "200px",
-      flexDirection: "column",
-      color: "white",
-      fontFamily: "Bungee",
-      display: "flex",
-      justifyContent: "center",
-      textAlign: "center",
-      // border: "2px solid yellow",
-      lineHeight: "50px"
-    };
 
-    const flatText = {
-      fontFamily: "Open Sans",
-      lineHeight: "30px"
-    }
+    var { isLoaded, items} = this.state;
 
-    const container = {
-      height: "580px",
-      width: "1233px",
-      justifyContent: "center",
-      alignSelf: "center",
-      flexDirection: "row",
-      display: "flex"
+    if(!isLoaded) {
+      return <div>Loading...</div>;
     }
-
-    const gradientImage = {
-      height: "580px",
-      width: "50%",
-      float: "right",
-      display: "flex",
-      justifyContent: "center",
-      backgroundImage:`url(${gradient})`,
-      backgroundSize: "cover",
-      backgroundPosition: "center"
-    }
-
-    const brainstormImage = {
-      height: "580px",
-      width: "50%",
-      backgroundImage:`url(${image})`,
-      backgroundSize: "cover",
-      backgroundPosition: "center",
-    }
-
-    const bg = {
-      height:"100vh",
-      display: "flex",
-      flexDirection: "column",
-      justifyContent: "center",
-      // backgroundColor: "blue"
-    }
+    
+   
     return (
       <div className="App">
           <div style={bg}>
@@ -87,11 +111,19 @@ class BrainstormCard extends Component {
               </div>
             </div>
           </div>
+
+      <h1>
+        {items.map(item => (
+            <li key={item.id}>
+              {item.username}
+            </li>
+        ))};
+      </h1>
+
       </div>
     );
   }
 }
-
 
 export default BrainstormCard;
 
