@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import logo from '../../images/heroImage.jpg'; // Use this image
-import '../../App.css';
+import logo from '../images/heroImage.jpg'; // Use this image
+import '../App.css';
 
 class HeroImage extends Component {
   constructor() {
