@@ -8,6 +8,7 @@ const OurAboutUs = styled.p`
     z-index: 5;
     background-size: cover;
     height: 100vh;
+    margin: 0;
     
 
     .au-content {

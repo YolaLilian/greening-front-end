@@ -19,13 +19,13 @@ class Cardlink extends Component {
   //Dit is je render wat getoond wordt.
   render() {
     const container = {
-        height:"100vh",
-        backgroundColor: "white",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        display: "flex",
-        flexDirection: "row",
-        justifyContent: "center"
+      height:"50vh",
+      display: "flex",
+      flexDirection: "row",
+      justifyContent: "center",
+      alignitems: "center",
+      margin: "50px 0",
+      // border: "3px solid red",
     }
 
     const cardlinkStyle = {
@@ -36,7 +36,8 @@ class Cardlink extends Component {
         alignSelf: "center",
         padding: "30px",
         margin: "40px",
-        marginTop: "-300px",
+        margintop: "50px",
+        // border: "2px solid blue",
         // cursor: "pointer"
     }
 

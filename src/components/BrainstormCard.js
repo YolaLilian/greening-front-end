@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import image from '../images/brainstorm.jpg'; // Use this image
 import gradient from '../images/gradient_2.jpg'; // Use this image
+import bgImage from '../images/Rectangle2.png';
 import '../App.css';
 
 class BrainstormCard extends Component {
@@ -18,17 +19,20 @@ class BrainstormCard extends Component {
   }
 
   render() {
+    
+    // const background = {
+    //   backgroundImage: `url(${bgImage})`
+    // };
+
     const header = {
       width: "60%",
-      // height: "200px",
       flexDirection: "column",
       color: "white",
       fontFamily: "Bungee",
       display: "flex",
       justifyContent: "center",
       textAlign: "center",
-      // border: "2px solid yellow",
-      lineHeight: "50px"
+      lineHeight: "50px",
     };
 
     const flatText = {
@@ -65,12 +69,13 @@ class BrainstormCard extends Component {
     }
 
     const bg = {
-      height:"100vh",
+      height:"90vh",
       display: "flex",
       flexDirection: "column",
       justifyContent: "center",
-      // backgroundColor: "blue"
+      backgroundImage: `url(${bgImage})`
     }
+    
     return (
       <div className="App">
           <div style={bg}>
