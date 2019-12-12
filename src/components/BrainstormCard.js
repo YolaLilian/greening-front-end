@@ -73,9 +73,10 @@ class BrainstormCard extends Component {
       display: "flex",
       flexDirection: "column",
       justifyContent: "center",
+      backgroundsize: "cover",
       backgroundImage: `url(${bgImage})`
     }
-    
+
     return (
       <div className="App">
           <div style={bg}>
