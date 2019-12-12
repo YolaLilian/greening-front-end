@@ -43,14 +43,16 @@ class Cardlink extends Component {
 
     const h3_style = {
         color: "white",
-        textAlign: "center"
+        textAlign: "center",
+        justifyContent: "center",
+        display: "flex"
     }
     return (
       <div className="App">
           <div style={container}>
               <div className="cardlink" style={cardlinkStyle}>
                 <img src={icon_1} />
-                <h3 style={h3_style}>Brainstormen</h3>
+                <h3 style={h3_style}>Brainstorm</h3>
               </div>
               <div className="cardlink" style={cardlinkStyle}>
                 <img src={icon_2} />
