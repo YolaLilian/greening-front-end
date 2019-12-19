@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
-import cardlink from '../../images/cardlink_bg.jpg'; // Use this image
-import icon_1 from '../../images/brain.svg';
-import icon_2 from '../../images/idea.svg';
-import icon_3 from '../../images/united.svg';
-import icon_4 from '../../images/magic-hat.svg';
-import '../../App.css';
+import cardlink from '../../../images/cardlink_bg.jpg'; // Use this image
+import icon_1 from '../../../images/brain.svg';
+import icon_2 from '../../../images/idea.svg';
+import icon_3 from '../../../images/united.svg';
+import icon_4 from '../../../images/magic-hat.svg';
+import '../../../App.css';
 
 class Cardlink extends Component {
   constructor() {
@@ -51,19 +51,19 @@ class Cardlink extends Component {
       <div className="App">
           <div style={container}>
               <div className="cardlink" style={cardlinkStyle}>
-                <img src={icon_1} />
+                <img src={icon_1}  alt=""/>
                 <h3 style={h3_style}>Brainstorm</h3>
               </div>
               <div className="cardlink" style={cardlinkStyle}>
-                <img src={icon_2} />
+                <img src={icon_2} alt=""/>
                 <h3 style={h3_style}>Ideeen</h3>
               </div>
               <div className="cardlink" style={cardlinkStyle}>
-                <img src={icon_3} />
+                <img src={icon_3} alt=""/>
                 <h3 style={h3_style}>Bijeenkomst</h3>
               </div>
               <div className="cardlink" style={cardlinkStyle}>
-                <img src={icon_4} />
+                <img src={icon_4} alt=""/>
                 <h3 style={h3_style}>Tips and tricks</h3>
               </div>
           </div>

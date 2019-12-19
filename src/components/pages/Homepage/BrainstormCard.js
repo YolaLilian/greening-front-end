@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
-import image from '../../images/brainstorm.jpg'; // Use this image
-import gradient from '../../images/gradient_2.jpg'; // Use this image
-import bgImage from '../../images/Rectangle2.png';
-import '../../App.css';
+import image from '../../../images/brainstorm.jpg'; // Use this image
+import gradient from '../../../images/gradient_2.jpg'; // Use this image
+import bgImage from '../../../images/Rectangle2.png';
+import '../../../App.css';
 
 class BrainstormCard extends Component {
   constructor() {

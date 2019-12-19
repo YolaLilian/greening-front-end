@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Navlinks from './Navlinks';
 import Logo from '../../images/Logo1.png';
+import { Link } from 'react-router-dom';
 
 const MyDesktopNavbar = styled.nav`
     z-index: 10;
@@ -41,9 +42,8 @@ const DesktopNavbar = () => {
     return (
         <MyDesktopNavbar>
             <div className="logo">
-                <img src={ Logo } alt="" />
+            <Link to="/" className="link"><img src={ Logo } alt="" /></Link>
             </div> 
-
             <Navlinks />
         </MyDesktopNavbar>
     );

@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
-import logo from '../../images/heroImage.jpg'; // Use this image
-import '../../App.css';
+import logo from '../../../images/heroImage.jpg';
+import { Link } from 'react-router-dom';
+import '../../../App.css';
 
 class HeroImage extends Component {
   constructor() {
@@ -66,7 +67,7 @@ class HeroImage extends Component {
       <div className="App">
           <div style={bg}>
             <h1 style={header}>{this.state.title}</h1>
-            <button className="button" onClick={ () => this.loadData() }>Deel jouw idee</button>
+            <button className="button" onClick={ () => this.loadData() }>            <Link to="/ideas" className="link">Deel jouw idee</Link></button>
           </div>
       </div>
     );
