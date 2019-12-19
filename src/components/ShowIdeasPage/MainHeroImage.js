@@ -27,22 +27,17 @@ const OurMainHeroImage = styled.p`
         color: white;
         font-family: Bungee;
         font-size: 50px;
-
     }
-
-    /* .heroContent {
-        z-index: 10;
-    } */
 `;
 
 
 const OurheroImage = () => {
     return (
         <OurMainHeroImage>
-            <div className="heroContentH1">
+            <div className="heroContent">
                 <h1>Ideeën</h1>
-                <button className="button" onClick={ () => this.loadData() }>
-                    <Link to="{Ideas}" className="link">Maak een idee aan</Link>
+                <button className="button" onClick={ <Link to="/"></Link>}>
+                    <Link to="/" className="link">Maak een idee aan</Link>
                 </button>
             </div>
         </OurMainHeroImage>
