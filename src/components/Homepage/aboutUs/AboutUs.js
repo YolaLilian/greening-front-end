@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import bgImage from '../../images/Rectangle1.png';
+import bgImage from '../../../images/Rectangle1.png';
 import AboutUsContent from './AboutUsContent';
 
 const OurAboutUs = styled.p`

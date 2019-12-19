@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
-import cardlink from '../images/cardlink_bg.jpg'; // Use this image
-import icon_1 from '../images/brain.svg';
-import icon_2 from '../images/idea.svg';
-import icon_3 from '../images/united.svg';
-import icon_4 from '../images/magic-hat.svg';
-import '../App.css';
+import cardlink from '../../images/cardlink_bg.jpg'; // Use this image
+import icon_1 from '../../images/brain.svg';
+import icon_2 from '../../images/idea.svg';
+import icon_3 from '../../images/united.svg';
+import icon_4 from '../../images/magic-hat.svg';
+import '../../App.css';
 
 class Cardlink extends Component {
   constructor() {
