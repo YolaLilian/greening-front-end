@@ -1,10 +1,8 @@
 import React, {Component} from 'react';
-<<<<<<< HEAD:src/components/BrainstormCard.js
-import image from '../images/brainstorm.jpg'; // Use this image
-import gradient from '../images/gradient_2.jpg'; // Use this image
-import bgImage from '../images/Rectangle2.png';
-import '../App.css';
-import axios from 'axios';
+import image from '../../../images/brainstorm.jpg'; // Use this image
+import gradient from '../../../images/gradient_2.jpg'; // Use this image
+import bgImage from '../../../images/Rectangle2.png';
+import '../../../App.css';
 
 const header = {
   width: "60%",
@@ -59,12 +57,6 @@ const bg = {
   justifyContent: "center",
   // backgroundColor: "blue"
 }
-=======
-import image from '../../../images/brainstorm.jpg'; // Use this image
-import gradient from '../../../images/gradient_2.jpg'; // Use this image
-import bgImage from '../../../images/Rectangle2.png';
-import '../../../App.css';
->>>>>>> 1f8e804deedd2dab44f47025cb7514072b41524f:src/components/pages/Homepage/BrainstormCard.js
 
 class BrainstormCard extends Component {
   constructor() {
@@ -80,38 +72,6 @@ class BrainstormCard extends Component {
     this.setState( {title: "Welkom bij Greening"})
   }
 
-<<<<<<< HEAD
-  render() {
-    
-    // const background = {
-    //   backgroundImage: `url(${bgImage})`
-    // };
-
-    const header = {
-      width: "60%",
-      flexDirection: "column",
-      color: "white",
-      fontFamily: "Bungee",
-      display: "flex",
-      justifyContent: "center",
-      textAlign: "center",
-      lineHeight: "50px",
-    };
-
-    const flatText = {
-      fontFamily: "Open Sans",
-      lineHeight: "30px"
-    }
-
-    const container = {
-      height: "580px",
-      width: "1233px",
-      justifyContent: "center",
-      alignSelf: "center",
-      flexDirection: "row",
-      display: "flex"
-    }
-=======
   componentDidMount() {
     fetch('http://greening.louis.lol/api/id')
       .then(response => response.json())
@@ -127,13 +87,11 @@ class BrainstormCard extends Component {
         console.log(error)
       })
   }
->>>>>>> brainstormCard
 
   render() {
 
     var { isLoaded, items} = this.state;
 
-<<<<<<< HEAD
     const bg = {
       height:"90vh",
       display: "flex",
@@ -143,13 +101,11 @@ class BrainstormCard extends Component {
       backgroundImage: `url(${bgImage})`
     }
 
-=======
     if(!isLoaded) {
       return <div>Loading...</div>;
     }
     
    
->>>>>>> brainstormCard
     return (
       <div className="App">
           <div style={bg}>

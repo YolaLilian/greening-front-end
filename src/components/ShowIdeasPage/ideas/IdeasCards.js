@@ -37,12 +37,6 @@ const container = {
                 .then(data => setIdeas(data))
     },[])
 
-    let ideass = [
-        { name : "hoi"},
-        { name : "hoi2"},
-        { name : "hoi3"}
-    ]
-
     return (
         <div className="App">
        <div style={container}>
@@ -67,7 +61,7 @@ const container = {
              <h3 style={h3_style}>Troep opvissen uit de rivier</h3>
            </div> */}
        </div>
-   </div>
+    </div>
     )
 }
 

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import cardlink from '../../../images/cardlink_bg.jpg';
+// import cardlink from '../../../images/cardlink_bg.jpg';
 import IdeasCards from './IdeasCards';
 // import styled from 'styled-components';
 
