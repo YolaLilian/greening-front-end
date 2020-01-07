@@ -6,7 +6,8 @@ import Footer from './components/footer/Footer';
 import Cardlink from './components/pages/Homepage/CardLink';
 import BrainstormCard from './components/pages/Homepage/BrainstormCard';
 import { BrowserRouter, Route } from 'react-router-dom';
-import Ideas from './components/pages/Ideas'
+import Ideas from './components/pages/Ideas';
+import TipsTricks from './components/pages/TipsTricks';
 import './App.css';
 
 function App() {
@@ -25,7 +26,7 @@ function App() {
 
       <Route path="/ideas" component={Ideas} />
 
-
+      <Route path="/tips-and-tricks" component={TipsTricks} />
     </BrowserRouter>
   );
 }
