@@ -15,31 +15,34 @@ class Ideas extends Component {
   //Dit is je render wat getoond wordt.
   render() {
     const container = {
-      height:"50vh",
       display: "flex",
       flexDirection: "row",
-      justifyContent: "center",
+      justifyContent: "space-around",
       alignitems: "center",
-      margin: "50px 0"
+      flexWrap: "wrap",
+      margin: "150px 150px",
     }
-
+    
     const cardlinkStyle = {
-        backgroundImage:`url(${cardlink})`,
-        backgroundSize: "cover",
-        height:"250px",
-        width: "200px",
-        alignSelf: "center",
-        padding: "30px",
-        margin: "40px",
-        margintop: "50px"
+      backgroundImage:`url(${cardlink})`,
+      backgroundSize: "cover",
+      height:"225px",
+      width: "175px",
+      alignSelf: "center",
+      padding: "30px",
+      margin: "40px",
+      margintop: "50px",
+      display: "flex",
+      justifyContent: "center",
+      flexWrap: "wrap",
+    }
+    
+    const h3_style = {
+      color: "white",
+      fontSize: "20px",
     }
 
-    const h3_style = {
-        color: "white",
-        textAlign: "center",
-        justifyContent: "center",
-        display: "flex",
-    }
+
     return (
       <div className="App">
           <div style={container}>

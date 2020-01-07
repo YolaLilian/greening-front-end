@@ -15,55 +15,58 @@ class Cardlink extends Component {
     console.log("Hallo ik ben er")
   }
 
-
   //Dit is je render wat getoond wordt.
   render() {
     const container = {
-      height:"50vh",
       display: "flex",
       flexDirection: "row",
-      justifyContent: "center",
+      justifyContent: "space-around",
       alignitems: "center",
-      margin: "50px 0",
-      // border: "3px solid red",
+      flexWrap: "wrap",
+      margin: "150px 150px",
     }
 
     const cardlinkStyle = {
-        backgroundImage:`url(${cardlink})`,
-        backgroundSize: "cover",
-        height:"150px",
-        width: "100px",
-        alignSelf: "center",
-        padding: "30px",
-        margin: "40px",
-        margintop: "50px",
-        // border: "2px solid blue",
-        // cursor: "pointer"
+      backgroundImage:`url(${cardlink})`,
+      backgroundSize: "cover",
+      height:"225px",
+      width: "175px",
+      alignSelf: "center",
+      padding: "30px",
+      margin: "40px",
+      margintop: "50px",
+      display: "flex",
+      justifyContent: "center",
+      flexWrap: "wrap",
+    }
+
+    const imageStyle = {
+      height: "170px",
+      width: "120px",
     }
 
     const h3_style = {
-        color: "white",
-        textAlign: "center",
-        justifyContent: "center",
-        display: "flex"
+      color: "white",
+      fontSize: "20px",
     }
+
     return (
       <div className="App">
           <div style={container}>
               <div className="cardlink" style={cardlinkStyle}>
-                <img src={icon_1}  alt=""/>
+                <img style={imageStyle} src={icon_1}  alt=""/>
                 <h3 style={h3_style}>Brainstorm</h3>
               </div>
               <div className="cardlink" style={cardlinkStyle}>
-                <img src={icon_2} alt=""/>
+                <img style={imageStyle} src={icon_2} alt=""/>
                 <h3 style={h3_style}>Idee&euml;n</h3>
               </div>
               <div className="cardlink" style={cardlinkStyle}>
-                <img src={icon_3} alt=""/>
+                <img style={imageStyle} src={icon_3} alt=""/>
                 <h3 style={h3_style}>Bijeenkomsten</h3>
               </div>
               <div className="cardlink" style={cardlinkStyle}>
-                <img src={icon_4} alt=""/>
+                <img style={imageStyle} src={icon_4} alt=""/>
                 <h3 style={h3_style}>Tips and tricks</h3>
               </div>
           </div>

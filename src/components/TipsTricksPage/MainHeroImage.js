@@ -14,12 +14,6 @@ const OurMainHeroImage = styled.p`
     display: flex;
     justify-content: center;
     align-items: center;
-
-    .button a {
-        text-decoration: none;
-        color: white;
-        font-family: "Open Sans";
-    }
     
     h1 {
         margin: 0;
@@ -36,9 +30,6 @@ const OurheroImage = () => {
         <OurMainHeroImage>
             <div className="heroContent">
                 <h1>Tips and Tricks</h1>
-                <button className="button" onClick={ <Link to="/"></Link>}>
-                    <Link to="/tips-and-tricks" className="link">Tips and Tricks</Link>
-                </button>
             </div>
         </OurMainHeroImage>
     );
