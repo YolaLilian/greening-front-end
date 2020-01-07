@@ -1,16 +1,12 @@
-import React, {Component} from 'react';
-import cardlink from '../images/cardlink_bg.jpg'; // Use this image
-import icon_1 from '../images/brain.svg';
-import icon_2 from '../images/idea.svg';
-import icon_3 from '../images/united.svg';
-import icon_4 from '../images/magic-hat.svg';
-import '../App.css';
+import React, { Component } from 'react';
+import cardlink from '../../../images/cardlink_bg.jpg';
+// import styled from 'styled-components';
 
-class Cardlink extends Component {
-  constructor() {
-    super()
-    this.state = {
-      title: "Greening",
+class Ideas extends Component {
+    constructor() {
+        super()
+        this.state = {
+           title: "Greening",
     }
     console.log("Hallo ik ben er")
   }
@@ -24,47 +20,40 @@ class Cardlink extends Component {
       flexDirection: "row",
       justifyContent: "center",
       alignitems: "center",
-      margin: "50px 0",
-      // border: "3px solid red",
+      margin: "50px 0"
     }
 
     const cardlinkStyle = {
         backgroundImage:`url(${cardlink})`,
         backgroundSize: "cover",
-        height:"150px",
-        width: "100px",
+        height:"250px",
+        width: "200px",
         alignSelf: "center",
         padding: "30px",
         margin: "40px",
-        margintop: "50px",
-        // border: "2px solid blue",
-        // cursor: "pointer"
+        margintop: "50px"
     }
 
     const h3_style = {
         color: "white",
         textAlign: "center",
         justifyContent: "center",
-        display: "flex"
+        display: "flex",
     }
     return (
       <div className="App">
           <div style={container}>
               <div className="cardlink" style={cardlinkStyle}>
-                <img src={icon_1} />
-                <h3 style={h3_style}>Brainstorm</h3>
+                <h3 style={h3_style}>Strand opruimen</h3>
               </div>
               <div className="cardlink" style={cardlinkStyle}>
-                <img src={icon_2} />
-                <h3 style={h3_style}>Ideeen</h3>
+                <h3 style={h3_style}>Vuurwerkafval opvegen</h3>
               </div>
               <div className="cardlink" style={cardlinkStyle}>
-                <img src={icon_3} />
-                <h3 style={h3_style}>Bijeenkomst</h3>
+                <h3 style={h3_style}>Bomen planten in het Kralingse Bos</h3>
               </div>
               <div className="cardlink" style={cardlinkStyle}>
-                <img src={icon_4} />
-                <h3 style={h3_style}>Tips and tricks</h3>
+                <h3 style={h3_style}>Troep opvissen uit de rivier</h3>
               </div>
           </div>
       </div>
@@ -72,5 +61,4 @@ class Cardlink extends Component {
   }
 }
 
-
-export default Cardlink;
+export default Ideas;

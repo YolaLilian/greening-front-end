@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+<<<<<<< HEAD:src/components/BrainstormCard.js
 import image from '../images/brainstorm.jpg'; // Use this image
 import gradient from '../images/gradient_2.jpg'; // Use this image
 import bgImage from '../images/Rectangle2.png';
@@ -58,6 +59,12 @@ const bg = {
   justifyContent: "center",
   // backgroundColor: "blue"
 }
+=======
+import image from '../../../images/brainstorm.jpg'; // Use this image
+import gradient from '../../../images/gradient_2.jpg'; // Use this image
+import bgImage from '../../../images/Rectangle2.png';
+import '../../../App.css';
+>>>>>>> 1f8e804deedd2dab44f47025cb7514072b41524f:src/components/pages/Homepage/BrainstormCard.js
 
 class BrainstormCard extends Component {
   constructor() {
