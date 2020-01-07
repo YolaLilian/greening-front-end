@@ -72,7 +72,7 @@ class BrainstormCard extends Component {
   }
 
   componentDidMount() {
-    fetch('http://greening.louis.lol/api')
+    fetch('http://greening.louis.lol/api/id')
       .then(response => response.json())
       .then(json => {
         this.setState({
