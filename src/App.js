@@ -5,18 +5,25 @@ import AboutUs from './components/aboutUs/AboutUs';
 import Footer from './components/footer/Footer';
 import Cardlink from './components/CardLink';
 import BrainstormCard from './components/BrainstormCard';
-import { BrowserRouter } from 'react-router-dom';
+import CreateIdea from './components/pages/CreateIdea';
+import { BrowserRouter, Route } from 'react-router-dom';
 import './App.css';
 
 function App() {
   return (
     <BrowserRouter>
-      <Navbar />
-      <HeroImage />
-      <Cardlink />
-      <AboutUs />
-      <BrainstormCard />
-      <Footer />
+      <Route exact path="/" render={props => (
+        <React.Fragment>
+          <Navbar />
+          <HeroImage />
+          <Cardlink />
+          <AboutUs />
+          <BrainstormCard />
+          <Footer />
+        </React.Fragment>
+      )} />
+      <Route path="/ideas/create" component={CreateIdea} />
+      
     </BrowserRouter>
   );
 }
