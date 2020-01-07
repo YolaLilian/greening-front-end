@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import image from '../images/brainstorm.jpg'; // Use this image
 import gradient from '../images/gradient_2.jpg'; // Use this image
 import '../App.css';
+import axios from 'axios';
 
 const header = {
   width: "60%",
@@ -75,6 +76,7 @@ class BrainstormCard extends Component {
     fetch('http://greening.louis.lol/api/id')
       .then(response => response.json())
       .then(json => {
+        console.log(json)
         this.setState({
           isLoaded: true,
           items: json,
