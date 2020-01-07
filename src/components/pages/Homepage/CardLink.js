@@ -56,11 +56,11 @@ class Cardlink extends Component {
               </div>
               <div className="cardlink" style={cardlinkStyle}>
                 <img src={icon_2} alt=""/>
-                <h3 style={h3_style}>Ideeen</h3>
+                <h3 style={h3_style}>Idee&euml;n</h3>
               </div>
               <div className="cardlink" style={cardlinkStyle}>
                 <img src={icon_3} alt=""/>
-                <h3 style={h3_style}>Bijeenkomst</h3>
+                <h3 style={h3_style}>Bijeenkomsten</h3>
               </div>
               <div className="cardlink" style={cardlinkStyle}>
                 <img src={icon_4} alt=""/>
