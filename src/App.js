@@ -9,6 +9,7 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import Ideas from './components/pages/Ideas';
 import TipsTricks from './components/pages/TipsTricks';
 import CreateIdea from './components/pages/CreateIdea'; 
+import Login from './components/Login'; 
 import './App.css';
 import Form from './components/Form';
 
@@ -22,7 +23,7 @@ function App() {
           <Cardlink />
           <AboutUs />
           <BrainstormCard />
-          {/* <Form /> */}
+          <Form />
           <Footer />
         </React.Fragment>
       )} />
@@ -32,6 +33,7 @@ function App() {
       <Route path="/ideas" component={Ideas} />
 
       <Route path="/tips-and-tricks" component={TipsTricks} />
+      <Route path="/login" component={Login} />
     </BrowserRouter>
   );
 }
