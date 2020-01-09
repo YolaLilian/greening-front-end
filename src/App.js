@@ -27,9 +27,14 @@ function App() {
         </React.Fragment>
       )} />
 
-      <Route path="/ideas/create" component={CreateIdea} />
+      <Route path="/ideas/create" render={props => (
+        <React.Fragment>
+          <CreateIdea />
+        </React.Fragment>
+        
+      )} />
       
-      <Route path="/ideas" component={Ideas} />
+      <Route exact path="/ideas" component={Ideas} />
 
       <Route path="/tips-and-tricks" component={TipsTricks} />
     </BrowserRouter>

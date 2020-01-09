@@ -10,15 +10,23 @@ const Form = (addIdea) => {
             location: ''
         },
         onSubmit: values => {
-            fetch("http://greening.louis.lol/api/idea", {
+            fetch("http://greening.louis.lol/api/ideas", {
                 method: "POST",
                 body: JSON.stringify(values)
             })
         },
     });
 
+    const myStyle = {
+        display: "flex",
+        justifyContent: "center",
+        alignSelf: "center",
+        flexDirection: "row",
+        padding: "30px"
+    }
+
     return (
-        <div>
+        <div style={myStyle}>
             <form onSubmit={formik.handleSubmit}>
                 <input onChange={formik.handleChange} value={formik.values.title} name="title" />
                 <input onChange={formik.handleChange} value={formik.values.description} name="description" />
