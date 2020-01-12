@@ -12,7 +12,11 @@ const Form = (addIdea) => {
         onSubmit: values => {
             fetch("http://greening.louis.lol/api/ideas", {
                 method: "POST",
-                body: JSON.stringify(values)
+                body: JSON.stringify(values),
+                headers: {
+                    'Accept':'application/json',
+                    'Content-Type':'application/json',
+                }
             })
         },
     });
@@ -20,17 +24,33 @@ const Form = (addIdea) => {
     const myStyle = {
         display: "flex",
         justifyContent: "center",
-        alignSelf: "center",
+        // alignSelf: "center",
         flexDirection: "row",
-        padding: "30px"
+        padding: "30px",
+    }
+
+    const formInput = {
+        borderStyle: "none",
+        backgroundColor: "#F3F3F3",
+        width: "80%",
+        flexDirection: "column",
+        display: "flex",
+        margin: "10px"
+    }
+
+    const myStyleDiv = {
+        backgroundColor: "white",
+        width: "50vw",
+        display: "flex",
+        alignSelf: "center",
     }
 
     return (
-        <div style={myStyle}>
-            <form onSubmit={formik.handleSubmit}>
-                <input onChange={formik.handleChange} value={formik.values.title} name="title" />
-                <input onChange={formik.handleChange} value={formik.values.description} name="description" />
-                <input onChange={formik.handleChange} value={formik.values.location} name="location" />
+        <div style={myStyleDiv}>
+            <form onSubmit={formik.handleSubmit} style={myStyle}>
+                <input onChange={formik.handleChange} style={formInput} value={formik.values.title} name="title" placeholder="name"/>
+                <input onChange={formik.handleChange} style={formInput} value={formik.values.description} name="description" placeholder="description"/>
+                <input onChange={formik.handleChange} style={formInput} value={formik.values.subject} name="subject" placeholder="subject"/><br></br>
                 <button type="submit">submit</button>
             </form>
         </div>
