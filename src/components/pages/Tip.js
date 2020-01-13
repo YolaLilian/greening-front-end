@@ -1,18 +1,18 @@
 import React from "react";
 import Navbar from "../navigation/Navbar";
 import Footer from "../footer/Footer";
-import MainHeroImage from "../TipsTricksPage/MainHeroImage";
-import TipsOverview from "../TipsTricksPage/TipsOverview";
+import MainHeroImage from "../DetailTips/MainHeroImage";
+import DetailTip from "../DetailTips/DetailTip";
 
-function TipsTricks() {
+function Tip() {
     return (
         <React.Fragment>
             <Navbar />
             <MainHeroImage />
-            <TipsOverview />
+            <DetailTip />
             <Footer />
         </React.Fragment>
     );
 }
 
-export default TipsTricks;
+export default Tip;
