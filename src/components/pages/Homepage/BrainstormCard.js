@@ -62,8 +62,7 @@ class BrainstormCard extends Component {
   constructor() {
     super()
     this.state = {
-      items: [],
-      isLoaded: false,
+      items: []
     }
   }
   
@@ -72,26 +71,8 @@ class BrainstormCard extends Component {
     this.setState( {title: "Welkom bij Greening"})
   }
 
-  componentDidMount() {
-    fetch('http://greening.louis.lol/api/id')
-      .then(response => response.json())
-      .then(json => {
-        console.log(json)
-        this.setState({
-          isLoaded: true,
-          items: json,
-        })
-      })
-      .catch(error => {
-        console.log("aaargh")
-        console.log(error)
-      })
-  }
-
   render() {
-
-    var { isLoaded, items} = this.state;
-
+    
     const bg = {
       height:"90vh",
       display: "flex",
@@ -99,12 +80,7 @@ class BrainstormCard extends Component {
       justifyContent: "center",
       backgroundsize: "cover",
       backgroundImage: `url(${bgImage})`
-    }
-
-    if(!isLoaded) {
-      return <div>Loading...</div>;
-    }
-    
+    }    
    
     return (
       <div className="App">
@@ -122,15 +98,6 @@ class BrainstormCard extends Component {
               </div>
             </div>
           </div>
-
-      <h1>
-        {items.map(item => (
-            <li key={item.id}>
-              {item.username}
-            </li>
-        ))};
-      </h1>
-
       </div>
     );
   }

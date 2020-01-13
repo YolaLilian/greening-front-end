@@ -23,7 +23,7 @@ function App() {
           <Cardlink />
           <AboutUs />
           <BrainstormCard />
-          <Form />
+          {/* <Form /> */}
           <Footer />
         </React.Fragment>
       )} />
