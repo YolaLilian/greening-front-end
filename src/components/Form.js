@@ -1,5 +1,6 @@
 import React from 'react'
 import { useFormik } from 'formik';
+import { Redirect } from 'react-router-dom';
 
 const Form = (addIdea) => {
     // constructor() {
@@ -17,8 +18,8 @@ const Form = (addIdea) => {
     const formik = useFormik({
         initialValues: {
             title: '',
-            description: '',
-            location: ''
+            subject: '',
+            description: ''
         },
         onSubmit: values => {
             fetch("http://greening.louis.lol/api/ideas", {
@@ -29,13 +30,13 @@ const Form = (addIdea) => {
                     'Content-Type':'application/json',
                 }
             })
+            return <Redirect to="/ideas" />
         },
     });
 
     const myStyle = {
         display: "flex",
         justifyContent: "center",
-        // alignSelf: "center",
         flexDirection: "row",
         padding: "30px",
     }
@@ -60,8 +61,8 @@ const Form = (addIdea) => {
         <div style={myStyleDiv}>
             <form onSubmit={formik.handleSubmit} style={myStyle}>
                 <input onChange={formik.handleChange} style={formInput} value={formik.values.title} name="title" placeholder="title"/>
-                <input onChange={formik.handleChange} style={formInput} value={formik.values.description} name="description" placeholder="description"/>
                 <input onChange={formik.handleChange} style={formInput} value={formik.values.subject} name="subject" placeholder="subject"/><br></br>
+                <input onChange={formik.handleChange} style={formInput} value={formik.values.description} name="description" placeholder="description"/>
                 <button type="submit">submit</button>
             </form>
         </div>
