@@ -78,10 +78,10 @@ class BrainstormCard extends Component {
                         <div className="image" style={brainstormImage}></div>
                         <div className="gradient" style={gradientImage}>
                             <div className="text" style={header}>
-                                <h1>Creeër een brainstormsessie</h1>
+                                <h1>Creëer een brainstormsessie</h1>
                                 <button className="button" onClick={<Link to="/ideas/create"></Link>}>
                                     <Link to="/ideas/create" className="link">
-                                        Maak een idee aan
+                                        Creëer!
                                     </Link>
                                 </button>
                                 <p style={flatText}>en begin een nieuw revolutionair idee om de wereld wat groener te maken!</p>

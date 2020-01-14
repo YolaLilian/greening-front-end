@@ -4,7 +4,6 @@ import icon_1 from "../../../images/brain.svg";
 import icon_2 from "../../../images/idea.svg";
 import icon_3 from "../../../images/united2.svg";
 import icon_4 from "../../../images/magic-hat.svg";
-import { Link } from "react-router-dom";
 import "../../../App.css";
 
 class Cardlink extends Component {
