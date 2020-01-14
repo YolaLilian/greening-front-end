@@ -2,6 +2,17 @@ import React from 'react'
 import { useFormik } from 'formik';
 
 const Form = (addIdea) => {
+    // constructor() {
+    //     super()
+    //     this.state = {
+    //       title: "Greening",
+          
+    //     }
+
+    // loadData() {
+    //     <h1>{this.state.title}</h1>
+    //     this.setState( {title: "Je idee is opgeslagen!"})
+    //   }
 
     const formik = useFormik({
         initialValues: {
@@ -10,20 +21,48 @@ const Form = (addIdea) => {
             location: ''
         },
         onSubmit: values => {
-            fetch("http://greening.louis.lol/api/idea", {
+            fetch("http://greening.louis.lol/api/ideas", {
                 method: "POST",
-                body: JSON.stringify(values)
+                body: JSON.stringify(values),
+                headers: {
+                    'Accept':'application/json',
+                    'Content-Type':'application/json',
+                }
             })
         },
     });
 
+    const myStyle = {
+        display: "flex",
+        justifyContent: "center",
+        // alignSelf: "center",
+        flexDirection: "row",
+        padding: "30px",
+    }
+
+    const formInput = {
+        borderStyle: "none",
+        backgroundColor: "#F3F3F3",
+        width: "80%",
+        flexDirection: "column",
+        display: "flex",
+        margin: "10px"
+    }
+
+    const myStyleDiv = {
+        backgroundColor: "white",
+        width: "50vw",
+        display: "flex",
+        alignSelf: "center",
+    }
+
     return (
-        <div>
-            <form onSubmit={formik.handleSubmit}>
-                <input onChange={formik.handleChange} value={formik.values.title} name="title" />
-                <input onChange={formik.handleChange} value={formik.values.description} name="description" />
-                <input onChange={formik.handleChange} value={formik.values.location} name="location" />
-                <button type="submit">submit</button>
+        <div style={myStyleDiv}>
+            <form onSubmit={formik.handleSubmit} style={myStyle}>
+                <input onChange={formik.handleChange} style={formInput} value={formik.values.title} name="title" placeholder="title"/>
+                <input onChange={formik.handleChange} style={formInput} value={formik.values.description} name="description" placeholder="description"/>
+                <input onChange={formik.handleChange} style={formInput} value={formik.values.subject} name="subject" placeholder="subject"/><br></br>
+                <button onClick={ () => this.loadData() } type="submit">submit</button>
             </form>
         </div>
     )
