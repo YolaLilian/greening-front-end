@@ -38,7 +38,6 @@ const OurheroImage = () => {
                 <h1>Ideeën</h1>
                 <button className="button" onClick={ <Link to="/"></Link>}>
                     <Link to="/ideas/create" className="link">Maak een idee aan</Link>
-                    {/* <button className="button" onClick={ () => this.loadData() }><Link to="/ideas/create" className="link">Deel jouw idee</Link></button> */}
                 </button>
             </div>
         </OurMainHeroImage>

@@ -14,12 +14,13 @@ const Form = addIdea => {
                 method: "POST",
                 body: JSON.stringify(values),
                 headers: {
-                    "Accept": "application/json",
-                    "Content-Type": "application/json"
-                }
-            });
-            return <Redirect to="/ideas" />;
-        }
+                    'Accept':'application/json',
+                    'Content-Type':'application/json',
+                },
+                state: <h1>Test</h1> 
+            })
+            return <Redirect to="/ideas" />
+        },
     });
 
     const myStyleDiv = {
@@ -90,6 +91,12 @@ const Form = addIdea => {
                     <button type="submit">Verzenden</button>
                 </form>
             </div>
+            <form onSubmit={formik.handleSubmit} style={myStyle}>
+                <input onChange={formik.handleChange} style={formInput} value={formik.values.title} name="title" placeholder="title"/>
+                <input onChange={formik.handleChange} style={formInput} value={formik.values.subject} name="subject" placeholder="subject"/><br></br>
+                <input onChange={formik.handleChange} style={formInput} value={formik.values.description} name="description" placeholder="description"/>
+                <button type="submit" onClick={() => { window.location.href="/ideas" }}>submit</button>
+            </form>
         </div>
     );
 };

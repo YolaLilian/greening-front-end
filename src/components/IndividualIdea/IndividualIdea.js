@@ -41,7 +41,7 @@ const IdeaDetail = () => {
                         <p>{idea.title}</p>
                     </div>
                     <div id="detail">
-                        <h2 id="detail">Mogelijke locatie idee</h2>
+                        <h2 id="detail">Onderwerp</h2>
                         <p>{idea.subject}</p>
                     </div>
                     <div id="detail">
