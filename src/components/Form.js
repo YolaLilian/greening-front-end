@@ -88,15 +88,9 @@ const Form = addIdea => {
                       name="description"
                       placeholder="beschrijving"
                     />
-                    <button type="submit">Verzenden</button>
+                    <button type="submit" onClick={() => { window.location.href="/ideas" }}>Verzenden</button>
                 </form>
             </div>
-            <form onSubmit={formik.handleSubmit} style={myStyle}>
-                <input onChange={formik.handleChange} style={formInput} value={formik.values.title} name="title" placeholder="title"/>
-                <input onChange={formik.handleChange} style={formInput} value={formik.values.subject} name="subject" placeholder="subject"/><br></br>
-                <input onChange={formik.handleChange} style={formInput} value={formik.values.description} name="description" placeholder="description"/>
-                <button type="submit" onClick={() => { window.location.href="/ideas" }}>submit</button>
-            </form>
         </div>
     );
 };
