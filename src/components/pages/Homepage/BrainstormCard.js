@@ -2,7 +2,8 @@ import React, {Component} from 'react';
 import image from '../../../images/brainstorm.jpg'; // Use this image
 import gradient from '../../../images/gradient_2.jpg'; // Use this image
 import bgImage from '../../../images/Rectangle2.png';
-import '../../../App.css';
+import '../../../../src/App.css'
+import { withTheme } from 'styled-components';
 
 const header = {
   width: "60%",
@@ -67,8 +68,8 @@ class BrainstormCard extends Component {
   }
   
   loadData() {
-    console.log("Load data")
-    this.setState( {title: "Welkom bij Greening"})
+    // console.log("Load data")
+    
   }
 
   render() {
@@ -80,7 +81,12 @@ class BrainstormCard extends Component {
       justifyContent: "center",
       backgroundsize: "cover",
       backgroundImage: `url(${bgImage})`
-    }    
+    }
+    
+    const link = {
+      color: "white",
+      textDecoration: "none"
+    }
    
     return (
       <div className="App">
@@ -90,7 +96,7 @@ class BrainstormCard extends Component {
               <div className="gradient" style={gradientImage}>
                 <div className="text" style={header}>
                   <h1 >{this.state.title}</h1>
-                <button className="button" onClick={ () => this.loadData() }>Create</button>
+                <button className="button" onClick={ () => this.loadData() }><a href="ideas/create" style={link}>Create</a></button>
                   <p style={flatText}>en begin een nieuw revolutionair
                   idee om de wereld wat groener
                   te maken!</p>

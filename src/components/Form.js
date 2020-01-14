@@ -62,7 +62,7 @@ const Form = (addIdea) => {
                 <input onChange={formik.handleChange} style={formInput} value={formik.values.title} name="title" placeholder="title"/>
                 <input onChange={formik.handleChange} style={formInput} value={formik.values.description} name="description" placeholder="description"/>
                 <input onChange={formik.handleChange} style={formInput} value={formik.values.subject} name="subject" placeholder="subject"/><br></br>
-                <button onClick={ () => this.loadData() } type="submit">submit</button>
+                <button type="submit">submit</button>
             </form>
         </div>
     )

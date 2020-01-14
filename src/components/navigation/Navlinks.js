@@ -5,7 +5,7 @@ const Navlinks = () => {
     return (
         <ul className="nav-links">
             <li>
-                <Link to="/" className="link">Brainstormen</Link>
+                <Link to="/tips-and-tricks" className="link">Tips & Tricks</Link>
             </li>
             <li>
                 <Link to="/ideas" className="link">Ideeën</Link>
@@ -14,7 +14,7 @@ const Navlinks = () => {
                 <Link to="/" className="link">Bijeenkomsten</Link>
             </li>
             <li>
-                <Link to="/tips-and-tricks" className="link">Tips & Tricks</Link>
+                <Link to="/" className="link">Brainstormen</Link>
             </li>
             <li>
                 <Link to="/" className="link">Inloggen of registreren</Link>

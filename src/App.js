@@ -5,18 +5,19 @@ import AboutUs from './components/pages/Homepage/aboutUs/AboutUs';
 import Footer from './components/footer/Footer';
 import Cardlink from './components/pages/Homepage/CardLink';
 import BrainstormCard from './components/pages/Homepage/BrainstormCard';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Ideas from './components/pages/Ideas';
 import Idea from './components/pages/Idea';
 import TipsTricks from './components/pages/TipsTricks';
 import Tip from './components/pages/Tip';
 import CreateIdea from './components/pages/CreateIdea'; 
 import './App.css';
-import Form from './components/Form';
+// import Form from './components/Form';
 
 function App() {
   return (
     <BrowserRouter>
+    <Switch>
       <Route exact path="/" render={props => (
         <React.Fragment>
           <Navbar />
@@ -29,13 +30,13 @@ function App() {
         </React.Fragment>
       )} />
 
-      <Route exact path="/ideas/create" component={CreateIdea} />
-      {/* <Route path="/ideas/create" render={props => (
+      {/* <Route exact path="/ideas/create" component={CreateIdea} /> */}
+      <Route exact path="/ideas/create" render={props => (
         <React.Fragment>
           <CreateIdea />
         </React.Fragment>
         
-      )} /> */}
+      )} />
       
       <Route exact path="/ideas" component={Ideas} />
 
@@ -44,6 +45,7 @@ function App() {
       <Route exact path="/tips-and-tricks" component={TipsTricks} />
 
       <Route exact path="/tips-and-tricks/:id" component={Tip} />
+      </Switch>
     </BrowserRouter>
   );
 }

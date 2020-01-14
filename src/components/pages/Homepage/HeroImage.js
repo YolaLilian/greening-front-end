@@ -7,7 +7,7 @@ class HeroImage extends Component {
   constructor() {
     super()
     this.state = {
-      title: "Greening",
+      title: "Welkom bij Greening",
       
     }
     console.log("Hallo ik ben er")
@@ -52,7 +52,8 @@ class HeroImage extends Component {
     const header = {
       color: "white",
       fontFamily: "Bungee",
-      alignSelf: "center"
+      alignSelf: "center",
+      fontSize: "40px"
     };
     
     const bg = {
