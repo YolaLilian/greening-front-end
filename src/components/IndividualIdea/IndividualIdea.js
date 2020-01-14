@@ -3,7 +3,7 @@ import { useParams } from "react-router";
 import styled from "styled-components";
 
 const StyledIdeaDetail = styled.p`
-    height: 70vh;
+    min-height: 80vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -16,6 +16,8 @@ const StyledIdeaDetail = styled.p`
     #detail p {
         background-color: #eeeeee;
         font-size: 20px;
+        max-width:65vw; 
+        padding: 10px;
     }
 `;
 

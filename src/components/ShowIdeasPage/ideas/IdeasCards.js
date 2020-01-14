@@ -8,7 +8,8 @@ const container = {
     justifyContent: "space-around",
     alignitems: "center",
     flexWrap: "wrap",
-    margin: "150px 150px"
+    margin: "150px 150px",
+    
 };
 
 const cardlinkStyle = {
@@ -25,6 +26,17 @@ const cardlinkStyle = {
     flexWrap: "wrap"
 };
 
+const linkStyle = {
+    color: "white",
+    textDecoration: "none",
+    fontSize: "28px",
+    alignSelf: "center",
+    textAlign: "center",
+    // maxWidth: "155px"
+    // fontFamily: "Open Sans"
+    
+};
+
 const IdeasCards = () => {
     const [ideas, setIdeas] = useState([]);
 
@@ -39,7 +51,7 @@ const IdeasCards = () => {
             <div style={container}>
                 {ideas.map(idea => (
                     <div className="cardlink" style={cardlinkStyle}>
-                        <Link to={`/ideas/${idea.id}`}>{idea.title}</Link>
+                        <Link style={linkStyle} to={`/ideas/${idea.id}`}>{idea.title}</Link>
                     </div>
                 ))}
             </div>
