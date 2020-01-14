@@ -8,7 +8,8 @@ const container = {
     justifyContent: "space-around",
     alignitems: "center",
     flexWrap: "wrap",
-    margin: "150px 150px"
+    margin: "150px 150px",
+    
 };
 
 const cardlinkStyle = {
@@ -25,6 +26,16 @@ const cardlinkStyle = {
     flexWrap: "wrap"
 };
 
+const linkStyle = {
+    color: "white",
+    textDecoration: "none",
+    fontSize: "28px",
+    alignSelf: "center",
+    textAlign: "center",
+    // fontFamily: "Open Sans"
+    
+};
+
 const IdeasCards = () => {
     const [tips, setTips] = useState([]);
 
@@ -39,7 +50,7 @@ const IdeasCards = () => {
             <div style={container}>
                 {tips.map(tip => (
                     <div className="cardlink" style={cardlinkStyle}>
-                        <Link to={`/tips-and-tricks/${tip.id}`}>{tip.title}</Link>
+                        <Link style={linkStyle} to={`/tips-and-tricks/${tip.id}`}>{tip.title}</Link>
                     </div>
                 ))}
             </div>
