@@ -37,7 +37,7 @@ const OurheroImage = () => {
             <div className="heroContent">
                 <h1>Ideeën</h1>
                 <button className="button" onClick={ <Link to="/"></Link>}>
-                    <Link to="/" className="link">Maak een idee aan</Link>
+                    <Link to="/ideas/create" className="link">Maak een idee aan</Link>
                 </button>
             </div>
         </OurMainHeroImage>
