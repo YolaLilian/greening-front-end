@@ -19,11 +19,17 @@
 
 button {
   background-color: #EF9B2D;
+  color: white;
   padding: 10px;
   width: 200px;
   border-radius: 20px;
   border-style: none;
   font-family: "Open Sans";
   font-size: 20px;
-  align-self: center; 
+  align-self: center;
+}
+
+a.link {
+  color: white;
+  text-decoration: none;
 }
