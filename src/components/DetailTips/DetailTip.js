@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import styled from "styled-components";
 
-const StyledIdeaDetail = styled.p`
+const StyledTipDetail = styled.p`
     height: 70vh;
     display: flex;
     justify-content: center;
@@ -19,7 +19,7 @@ const StyledIdeaDetail = styled.p`
     }
 `;
 
-const IdeaDetail = () => {
+const TipDetail = () => {
     const [tip, setTip] = useState([]);
     const { id } = useParams();
 
@@ -32,24 +32,24 @@ const IdeaDetail = () => {
 
     return (
         <div className="App">
-            <StyledIdeaDetail>
+            <StyledTipDetail>
                 <div>
                     <div id="detail">
-                        <h2 id="detail">Naam idee</h2>
+                        <h2 id="detail">Naam tip of trick</h2>
                         <p>{tip.title}</p>
                     </div>
                     <div id="detail">
-                        <h2 id="detail">Mogelijke locatie idee</h2>
+                        <h2 id="detail">Onderwerp tip of trick</h2>
                         <p>{tip.subject}</p>
                     </div>
                     <div id="detail">
-                        <h2 id="detail">Beschrijving idee</h2>
+                        <h2 id="detail">Beschrijving tip of trick</h2>
                         <p>{tip.description}</p>
                     </div>
                 </div>
-            </StyledIdeaDetail>
+            </StyledTipDetail>
         </div>
     );
 };
 
-export default IdeaDetail;
+export default TipDetail;

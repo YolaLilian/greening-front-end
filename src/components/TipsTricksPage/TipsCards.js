@@ -39,7 +39,7 @@ const IdeasCards = () => {
             <div style={container}>
                 {tips.map(tip => (
                     <div className="cardlink" style={cardlinkStyle}>
-                        <Link to={`/ideas/${tip.id}`}>{tip.title}</Link>
+                        <Link to={`/tips-and-tricks/${tip.id}`}>{tip.title}</Link>
                     </div>
                 ))}
             </div>
