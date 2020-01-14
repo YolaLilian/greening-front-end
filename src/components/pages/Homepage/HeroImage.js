@@ -69,7 +69,7 @@ class HeroImage extends Component {
       <div className="App">
           <div style={bg}>
             <h1 style={header}>{this.state.title}</h1>
-            <button className="button" onClick={ () => this.loadData() }><Link to="/ideas" className="link">Deel jouw idee</Link></button>
+            <button className="button" onClick={ () => this.loadData() }><Link to="/ideas/create" className="link">Deel jouw idee</Link></button>
           </div>
       </div>
     );

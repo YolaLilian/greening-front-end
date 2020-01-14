@@ -2,6 +2,17 @@ import React from 'react'
 import { useFormik } from 'formik';
 
 const Form = (addIdea) => {
+    // constructor() {
+    //     super()
+    //     this.state = {
+    //       title: "Greening",
+          
+    //     }
+
+    // loadData() {
+    //     <h1>{this.state.title}</h1>
+    //     this.setState( {title: "Je idee is opgeslagen!"})
+    //   }
 
     const formik = useFormik({
         initialValues: {
@@ -48,10 +59,10 @@ const Form = (addIdea) => {
     return (
         <div style={myStyleDiv}>
             <form onSubmit={formik.handleSubmit} style={myStyle}>
-                <input onChange={formik.handleChange} style={formInput} value={formik.values.title} name="title" placeholder="name"/>
+                <input onChange={formik.handleChange} style={formInput} value={formik.values.title} name="title" placeholder="title"/>
                 <input onChange={formik.handleChange} style={formInput} value={formik.values.description} name="description" placeholder="description"/>
                 <input onChange={formik.handleChange} style={formInput} value={formik.values.subject} name="subject" placeholder="subject"/><br></br>
-                <button type="submit">submit</button>
+                <button onClick={ () => this.loadData() } type="submit">submit</button>
             </form>
         </div>
     )
