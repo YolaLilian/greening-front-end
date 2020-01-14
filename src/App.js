@@ -7,6 +7,7 @@ import Cardlink from './components/pages/Homepage/CardLink';
 import BrainstormCard from './components/pages/Homepage/BrainstormCard';
 import { BrowserRouter, Route } from 'react-router-dom';
 import Ideas from './components/pages/Ideas';
+import Idea from './components/pages/Idea';
 import TipsTricks from './components/pages/TipsTricks';
 import CreateIdea from './components/pages/CreateIdea'; 
 import './App.css';
@@ -35,6 +36,8 @@ function App() {
       )} />
       
       <Route exact path="/ideas" component={Ideas} />
+
+      <Route exact path="/ideas/:id" component={Idea} />
 
       <Route path="/tips-and-tricks" component={TipsTricks} />
     </BrowserRouter>
