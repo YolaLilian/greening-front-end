@@ -64,25 +64,25 @@ class Cardlink extends Component {
             <div className="App">
                 <div style={container}>
                     <div className="cardlink" style={cardlinkStyle}>
-                        <a href="greening.louis.lol/tips-and-tricks" style={linkStyle}>
+                        <a href="/" style={linkStyle}>
                             <img style={imageStyle} src={icon_1} alt="" />
                             <h3 style={h3_style}>Brainstorm</h3>
                         </a>
                     </div>
                     <div className="cardlink" style={cardlinkStyle}>
-                        <a href="greening.louis.lol/tips-and-tricks" style={linkStyle}>
+                        <a href="/ideas" style={linkStyle}>
                             <img style={imageStyle} src={icon_2} alt="" />
                             <h3 style={h3_extra_style}>Idee&euml;n</h3>
                         </a>
                     </div>
                     <div className="cardlink" style={cardlinkStyle}>
-                        <a href="greening.louis.lol/tips-and-tricks" style={linkStyle}>
+                        <a href="/" style={linkStyle}>
                             <img style={imageStyle} src={icon_3} alt="" />
                             <h3 style={h3_style}>Bijeenkomsten</h3>
                         </a>
                     </div>
                     <div className="cardlink" style={cardlinkStyle}>
-                        <a href="greening.louis.lol/tips-and-tricks" style={linkStyle}>
+                        <a href="/tips-and-tricks" style={linkStyle}>
                             <img style={imageStyle} src={icon_4} alt="" />
                             <h3 style={h3_style}>Tips and tricks</h3>
                         </a>

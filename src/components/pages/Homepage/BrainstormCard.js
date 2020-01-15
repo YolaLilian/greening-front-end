@@ -80,7 +80,7 @@ class BrainstormCard extends Component {
                             <div className="text" style={header}>
                                 <h1>Creëer een brainstormsessie</h1>
                                 <button className="button" onClick={<Link to="/ideas/create"></Link>}>
-                                    <Link to="/ideas/create" className="link">
+                                    <Link to="/" className="link">
                                         Creëer!
                                     </Link>
                                 </button>
