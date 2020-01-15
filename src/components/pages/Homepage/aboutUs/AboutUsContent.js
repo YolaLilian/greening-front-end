@@ -15,10 +15,6 @@ const AboutUsContent = () => {
                 Dit doen we door ideeën te verzinnen, te brainstormen en evenementen op te zetten om deze actie uiteindelijk
                 ook uit te voeren! Want daar gaat het natuurlijk om: <b>actie</b>
                 <br />
-                <br />
-                Samen met bewuste bedrijven zoals Blue City en de Rotterdamse Floating Farm is een samenwerking opgesteld
-                die helpt bij het waarmaken van deze evenementen.
-                <br />
             </p>
             <h4> Ook een bedankje aan Louis Laureys. Hij weet wel waarom.</h4>
         </div>
