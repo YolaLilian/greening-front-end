@@ -3,6 +3,12 @@ import { useFormik } from "formik";
 import { Redirect } from "react-router-dom";
 
 const Form = addIdea => {
+    let toHome = false;
+
+    function goHome () {
+        toHome = true;
+    }
+
     const formik = useFormik({
         initialValues: {
             title: "",
@@ -17,10 +23,18 @@ const Form = addIdea => {
                     'Accept':'application/json',
                     'Content-Type':'application/json',
                 },
-                state: <h1>Test</h1> 
+                state: <h1>Test</h1>
             })
-            return <Redirect to="/ideas" />
-        },
+            .then(setTimeout(() => {
+                console.log('This will run after 2 seconds!')
+              }, 2000))
+            .then(goHome())          
+            if (toHome === true) {
+                // eslint-disable-next-line no-restricted-globals
+                location.assign("/ideas");
+            }
+        } 
+        
     });
 
     const myStyleDiv = {
@@ -58,6 +72,8 @@ const Form = addIdea => {
     }
 
     return (
+        <>
+        {toHome ? <Redirect to="/ideas" /> : null}
         <div style={myStyleDiv}>
             <h1 style={h1_style}>Idee creëeren</h1>
             <div>
@@ -88,11 +104,13 @@ const Form = addIdea => {
                       name="description"
                       placeholder="beschrijving"
                     />
-                    <button type="submit" onClick={() => { window.location.href="/ideas" }}>Verzenden</button>
+                    <button type="submit">Verzenden</button>
                 </form>
             </div>
         </div>
-    );
+        </>
+    )
+    
 };
 
 export default Form;

@@ -30,11 +30,11 @@ function App() {
         </React.Fragment>
       )} />
 
-      {/* <Route exact path="/ideas/create" component={CreateIdea} /> */}
-      <Route exact path="/ideas/create" render={props => (
+      <Route exact path="/ideas/create" component={CreateIdea} />
+      {/* <Route exact path="/ideas/create" render={props => (
         <React.Fragment>
           <CreateIdea />
-        </React.Fragment>
+        </React.Fragment> */}
         
       )} />
       
